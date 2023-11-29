@@ -1,4 +1,4 @@
-# Joc Daus
+# :game_die: Joc de Daus
 
 ## Objectiu
 
@@ -150,8 +150,14 @@ Pots fer-te un arxiu `utils.js` on tenir les teves eines. En aquest cas com ho f
 - Necessitem simular també diversos intents o tirades amb els possibles resultats del dau.
 - Estaria bé un botó que ens permetès anar tirant els daus fins que guanyéssim.
 
-> **Important** Pensa que el teu component es renderitzarà cada vegada que canviï l'estat de les teves variables del useState. Pots aprofitar això per fer que en cada tir da dau sigui el responsable d'un nou renderitzat del component. Això és el que anomenem **re-render**.
+> **Important** Pensa que el teu component es renderitzarà cada vegada que canviï l'estat de les teves variables del useState. És a dir, quan modifiquem una variable d'estat de les definides amb useState (a través del "set..." normalment), si aquesta canvia, el component tornarà a renderitzar-se. Ara bé, el valor de l'estat no canvia fins que el component es torna a renderitzar! Això ho haurem de tenir sempre molt present!!!
+
+Pots aprofitar aquest funcionament del useState i els components per fer que en cada tir de dau sigui el responsable d'un nou renderitzat del component. Això és el que anomenem **re-render**.
 
 A continuació tens un exemple final amb dos component LuckyN i diferents combinacions de daus i sumes guanyadores:
 
 ![Daus Final](./assets/img_readme/daus_final.gif)
+
+## Bonus
+
+Pots intentar modificar el codi i que enlloc de mostrar-se números es mostrin els daus, fer que es vegin com si es tractès realment d'un
