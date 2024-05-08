@@ -1,0 +1,5 @@
+@import './index.css';
+
+.Dice {
+  @apply m-3 flex gap-2 rounded-md border-2 border-gray-500 p-2;
+}

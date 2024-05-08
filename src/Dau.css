@@ -1,0 +1,27 @@
+.Dau {
+    @apply inline-block flex h-16 w-16 items-center justify-center rounded-full text-4xl font-bold text-white;
+  }
+  
+  .Dau--1 {
+    @apply bg-red-500;
+  }
+  
+  .Dau--2 {
+    @apply bg-blue-500;
+  }
+  
+  .Dau--3 {
+    @apply bg-green-500;
+  }
+  
+  .Dau--4 {
+    @apply bg-yellow-500;
+  }
+  
+  .Dau--5 {
+    @apply bg-purple-500;
+  }
+  
+  .Dau--6 {
+    @apply bg-pink-500;
+  }
