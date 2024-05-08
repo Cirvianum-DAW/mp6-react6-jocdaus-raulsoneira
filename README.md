@@ -31,9 +31,9 @@ Quan programem en general i en especial amb React, la modularitat és molt impor
 
 Hi ha diferents maneres de "teoritzar" sobre això, però en general ens plantegem 3 tipus de components:
 
-- **Presentació**: Són components que només es preocupen de com es mostra la informació. No tenen estat. Normalment reben la informació a través de props i s'encarreguen de mostrar-la. No especifiquen com s'han de carregar o manipular les dades i no fan mutar un estat. És a dir, normalment son "stateless". 
+- **Presentació**: Són components que només es preocupen de com es mostra la informació. No tenen estat. Normalment reben la informació a través de props i s'encarreguen de mostrar-la. No especifiquen com s'han de carregar o manipular les dades i no fan mutar un estat. És a dir, normalment son "stateless".
 
-- **Lògica o Contenidors**: Són components que es preocupen de l'estat i/o la lògica de l'aplicació. Són els encarregats de proveir amb la informació i el comportament als components de presentació. Criden a accions i/o serveis que ofereixen com a "callbacks" als components de presentació. 
+- **Lògica o Contenidors**: Són components que es preocupen de l'estat i/o la lògica de l'aplicació. Són els encarregats de proveir amb la informació i el comportament als components de presentació. Criden a accions i/o serveis que ofereixen com a "callbacks" als components de presentació.
 
 - **Presentació i lògica**: Són components que requereixen de presentació i lògica. Són els més difícils de programar i els més difícils de mantenir.
 
@@ -158,6 +158,6 @@ A continuació tens un exemple final amb dos component LuckyN i diferents combin
 
 ![Daus Final](./assets/img_readme/daus_final.gif)
 
-## Bonus
+## Extra
 
-Pots intentar modificar el codi i que enlloc de mostrar-se números es mostrin els daus, fer que es vegin com si es tractès realment d'un
+Afegeix un input de manera que l'usuari pugui triar la suma guanyadora de manera dinàmica.
