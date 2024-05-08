@@ -4,7 +4,7 @@
 
 Amb aquest repte mirarem d'abordar un petit repte nosaltres mateixos a través d'un joc de daus, a veure si hem assolit els primer aprenentatges de React.
 
-**El joc consisteix a generar un nombre `N` de daus i establir una possible suma guanyadora. Si la suma dels daus és igual a la suma guanyadora, guanyem. Si no, perdem.**
+**El joc consisteix a generar un nombre `N` de daus i establir una possible suma guanyadora. Si la suma de la tirada de tots els daus és igual a la suma que hem pronosticada, guanyem. Si no, perdem.**
 
 Això, ens permetrà practicar els conceptes ja vistos de React però sobretot, entendre l'estratègia i el rol de cada component.
 
@@ -27,25 +27,25 @@ Això, ens permetrà practicar els conceptes ja vistos de React però sobretot, 
 
 Abans de començar a programar, anem a pensar quins components necessitem, quins seran els seus props i quina serà la seva funció (presentació o lògica).
 
-Quan programem en general i en especial amb React, la modularitat és molt important. Hem de mirar de tenir components petits i reutilitzables. És més fàcil de mantenir i d'entendre què fa cada component.
+Quan programem en general i en especial amb React, la modularitat és molt important. Hem de pensar en components petits i reutilitzables. Això ens fa més fàcil de mantenir i d'entendre què fa cada component.
 
-I en general ens plantegem 3 tipus de components:
+Hi ha diferents maneres de "teoritzar" sobre això, però en general ens plantegem 3 tipus de components:
 
-- **Presentació**: Són components que només es preocupen de mostrar informació. No tenen estat. Tracten amb l'aparença/UI.
+- **Presentació**: Són components que només es preocupen de com es mostra la informació. No tenen estat. Normalment reben la informació a través de props i s'encarreguen de mostrar-la. No especifiquen com s'han de carregar o manipular les dades i no fan mutar un estat. És a dir, normalment son "stateless". 
 
-- **Lògica**: Són components que només es preocupen de l'estat i/o la lògica de l'aplicació. No tracten la presentació de manera específica.
+- **Lògica o Contenidors**: Són components que es preocupen de l'estat i/o la lògica de l'aplicació. Són els encarregats de proveir amb la informació i el comportament als components de presentació. Criden a accions i/o serveis que ofereixen com a "callbacks" als components de presentació. 
 
-- **Presentació i lògica**: Són components que tenen presentació i lògica. Són els més difícils de programar i els més difícils de mantenir.
+- **Presentació i lògica**: Són components que requereixen de presentació i lògica. Són els més difícils de programar i els més difícils de mantenir.
 
-Sabent això, quins components creus que podríem necessitar en aquest joc?
+Sabent això, reflexiona quins components creus que podríem necessitar en aquest joc?
 
 Recorda que el joc ha de poder generar tants daus com considerem (`N` daus) i apartir d'aqui necessitarem un component que ens generi un dau. Aquest dau, tindrà un valor aleatori entre 1 i 6.
 
-D'entrada que et sembla si pensem en una estructura com aquesta:
+D'entrada aquesta podria ser una proposta:
 
 - **App**: Component principal que fa de contenidor de l'aplicació global.
-- **LuckyN**: Component per implementar la lògica del joc.
-- **Dice**: Component intermig "tonto" necessari per tenir una proposta més versàtil.
+- **LuckyN**: Component per implementar tota la lògica del joc.
+- **Dice**: Component intermig encarregat de mostrar el nombre 'N' de daus.
 - **Dau**: Component que ens permeti mostrar un dau amb un valor aleatori entre 1 i 6.
 
 A continuació t'ho mostro de manerara jeraquitzada amb un exemple de tres daus:
